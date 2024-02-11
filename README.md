@@ -33,36 +33,10 @@ defaults are included.
 
 ## Setup
 
-### With Docker
-
-#### With `docker compose` (recommended)
-
-```sh
-docker compose build
-docker compose up
-```
-
-#### Without `docker compose`
-
-```sh
-docker build . -t nix-rust-template
-docker volume create nix-rust-template-vol
-docker run --rm -it -v $PWD:/service nix-rust-template:latest
-```
-
-### Without Docker
-
 1. [Install nix](https://nixos.org/download.html)
-1. [Install nix flakes](https://nixos.wiki/wiki/Flakes)
+2. [Install nix flakes](https://nixos.wiki/wiki/Flakes)
 
 ## Commands
-
-If you are using Docker, prefix the following with `docker compose run --rm
-app`; for example:
-
-```sh
-docker compose run --rm app nix run .#watch
-```
 
 * `nix build`: build the package
 * `nix run` or `nix run .#app`: run the package
